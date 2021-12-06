@@ -1,0 +1,14 @@
+{% extends "_Base.html" %}
+{% block title %}
+Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquid labore placeat quod pariatur aperiam cumque vitae, accusantium deleniti libero fugiat. Mollitia laudantium explicabo nostrum veritatis corrupti quasi dignissimos, itaque culpa.
+{% endblock %}
+
+
+{% block content %} 
+    <ul>
+        {% for Snack in object_list %}
+        <li><a href = "{% url 'snack_detail' Snack.pk %}">{{snack}} - {{Snack.name}}</a></li>
+        {% endfor %}
+    </ul>
+{% endblock %}
+
